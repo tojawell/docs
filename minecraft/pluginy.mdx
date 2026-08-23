@@ -1,0 +1,37 @@
+---
+title: "Instalacja pluginów i modów"
+description: "Jak wgrać pluginy (Paper/Spigot) lub mody (Forge/Fabric) na serwer."
+---
+
+<Note>
+  Pluginy działają na serwerach typu **Paper** lub **Spigot**. Mody wymagają **Forge** lub **Fabric**. Sprawdź i w razie potrzeby zmień typ serwera w [Zmianie wersji i typu serwera](/minecraft/wersja-i-typ-serwera) — zrewaluuj przed przejściem dalej.
+</Note>
+
+## Instalacja pluginu
+
+<Steps>
+  <Step title="Pobierz plugin z zaufanego źródła">
+    Najlepiej z [Spigot](https://www.spigotmc.org/resources/) lub [Modrinth](https://modrinth.com/plugins). Pobieraj tylko z oficjalnych stron — pliki `.jar` z nieznanych źródeł mogą zawierać złośliwy kod.
+  </Step>
+  <Step title="Wgraj plik na serwer">
+    Przez [SFTP](/minecraft/sftp) lub Edytor plików w panelu, umieść plik `.jar` w folderze `plugins/`.
+  </Step>
+  <Step title="Zrestartuj serwer">
+    Pluginy ładują się przy starcie — użyj **Restart** w konsoli panelu.
+  </Step>
+  <Step title="Zweryfikuj">
+    W konsoli wpisz `/plugins` — powinien pojawić się na liście na zielono (załadowany poprawnie).
+  </Step>
+</Steps>
+
+## Instalacja moda
+
+Analogicznie, ale plik `.jar` moda wgrywasz do folderu `mods/` (dostępny na serwerach Forge/Fabric).
+
+<Warning>
+  Mieszanie pluginów z różnych źródeł lub niekompatybilnych wersji Minecraft to najczęstsza przyczyna crashy serwera. Sprawdź, czy wersja pluginu/moda pasuje do wersji Twojego serwera, i zawsze rób [backup](/minecraft/kopie-zapasowe) przed większymi zmianami.
+</Warning>
+
+## Usuwanie pluginu
+
+Wystarczy usunąć plik `.jar` z folderu `plugins/` i zrestartować serwer. Część pluginów tworzy też własny folder konfiguracyjny (np. `plugins/NazwaPluginu/`) — usuń go, jeśli chcesz pozbyć się również ustawień.

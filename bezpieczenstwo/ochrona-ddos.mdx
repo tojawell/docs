@@ -1,0 +1,22 @@
+---
+title: "Ochrona DDoS"
+description: "Jak działa ochrona przed atakami DDoS w Skylix."
+---
+
+Wszystkie usługi Skylix — serwery Minecraft, boty Discord i VPS — objęte są ochroną przed atakami DDoS **w cenie planu**, bez dodatkowych opłat.
+
+## Jak to działa w skrócie
+
+Ruch sieciowy trafiający do naszej infrastruktury jest analizowany, zanim dotrze do Twojego serwera. Podejrzany, złośliwy ruch (charakterystyczny dla ataków DDoS) jest filtrowany automatycznie, a ruch prawdziwych graczy/użytkowników przechodzi dalej bez zauważalnych opóźnień.
+
+## Co musisz zrobić jako klient
+
+W większości przypadków — nic. Ochrona działa automatycznie w tle. Kilka dobrych praktyk, które dodatkowo zmniejszają ryzyko:
+
+- **Nie udostępniaj publicznie surowego adresu IP** serwera bez potrzeby — używaj [domeny](/minecraft/domena) tam, gdzie to możliwe.
+- Dla paneli WWW/dashboardów bota rozważ dodatkowo usługę typu Cloudflare jako warstwę proxy.
+- Jeśli podejrzewasz, że Twój serwer jest aktualnie atakowany (lagi, rozłączenia graczy), zgłoś to przez [zgłoszenie w panelu](/panel/zgloszenia) — sprawdzimy ruch od naszej strony.
+
+<Note>
+  Status infrastruktury i ewentualne incydenty możesz na bieżąco śledzić na [status.skylix.pl](https://status.skylix.pl).
+</Note>

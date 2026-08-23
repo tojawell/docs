@@ -1,0 +1,41 @@
+---
+title: "Kopie zapasowe i przywracanie świata"
+description: "Jak tworzyć, pobierać i przywracać backupy serwera."
+---
+
+## Tworzenie kopii zapasowej
+
+<Steps>
+  <Step title="Wejdź do zakładki Backupy">
+    W panelu, w widoku serwera, przejdź do zakładki **Kopie zapasowe / Backups**.
+  </Step>
+  <Step title="Utwórz nowy backup">
+    Kliknij **Utwórz kopię**, opcjonalnie nadaj jej nazwę (np. `przed-aktualizacja-1.21`).
+  </Step>
+  <Step title="Poczekaj na zakończenie">
+    Czas zależy od rozmiaru świata — większe mapy zajmą więcej czasu.
+  </Step>
+</Steps>
+
+## Przywracanie backupu
+
+W tej samej zakładce wybierz backup z listy i kliknij **Przywróć / Restore**. Serwer zostanie zatrzymany, dane nadpisane zawartością kopii, a następnie możesz go ponownie uruchomić.
+
+<Warning>
+  Przywrócenie backupu **nadpisuje aktualny stan serwera** — wszystko, co wydarzyło się po utworzeniu tej kopii, zostanie utracone. Jeśli nie jesteś pewien, pobierz najpierw aktualny stan jako dodatkową kopię.
+</Warning>
+
+## Pobieranie backupu na dysk
+
+Każdą kopię możesz pobrać lokalnie jako plik `.zip` — przydatne jako dodatkowe zabezpieczenie poza panelem, np. przed dużą zmianą lub migracją.
+
+## Kiedy warto zrobić backup
+
+- przed zmianą [wersji lub typu serwera](/minecraft/wersja-i-typ-serwera),
+- przed instalacją większej liczby [pluginów/modów](/minecraft/pluginy),
+- przed dużą budową lub eventem na serwerze,
+- regularnie, jeśli masz włączone backupy automatyczne — sprawdź limity i częstotliwość w specyfikacji swojego planu.
+
+<Tip>
+  Liczba i pojemność dostępnych backupów zależy od wykupionego planu. Jeśli potrzebujesz więcej miejsca na kopie, napisz do nas przez [zgłoszenie](/panel/zgloszenia).
+</Tip>

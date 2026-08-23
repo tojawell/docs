@@ -1,0 +1,26 @@
+---
+title: "Reinstalacja systemu operacyjnego"
+description: "Jak wgrać na nowo system na swoim VPS."
+---
+
+<Warning>
+  Reinstalacja **całkowicie usuwa wszystkie dane** na dysku VPS-a. Jeśli masz cokolwiek wartościowego na serwerze, zrób kopię zapasową (np. przez `scp`/SFTP na swój komputer) zanim zaczniesz.
+</Warning>
+
+<Steps>
+  <Step title="Wejdź w ustawienia VPS w panelu">
+    Zaloguj się do [panelu klienta](https://panel.skylix.pl) i otwórz zakładkę **System / Reinstall** dla swojego VPS-a.
+  </Step>
+  <Step title="Wybierz system operacyjny">
+    Z listy dostępnych obrazów wybierz dystrybucję (np. Ubuntu, Debian) i jej wersję.
+  </Step>
+  <Step title="Potwierdź reinstalację">
+    Panel poprosi o potwierdzenie — to ostatni moment, żeby się wycofać, jeśli nie zrobiłeś jeszcze backupu.
+  </Step>
+  <Step title="Poczekaj na zakończenie">
+    Proces trwa zwykle kilka minut. Po zakończeniu dostaniesz nowe dane logowania (najczęściej nowe hasło root) mailem lub w panelu.
+  </Step>
+  <Step title="Zaloguj się ponownie">
+    Wróć do [Pierwszego logowania przez SSH](/vps/pierwsze-logowanie-ssh) i skonfiguruj świeży system od nowa.
+  </Step>
+</Steps>

@@ -1,0 +1,40 @@
+---
+title: "Podstawowe komendy Minecraft"
+description: "Najczęściej używane komendy administracyjne serwera."
+---
+
+Komendy wpisujesz w konsoli serwera (zakładka **Konsola** w panelu) albo w grze, poprzedzając je znakiem `/` — do tego potrzebne są uprawnienia operatora, patrz [Nadawanie OP](/minecraft/non-premium-i-op).
+
+## Tryb gry i świat
+
+| Komenda | Działanie |
+| --- | --- |
+| `/gamemode survival <nick>` | Ustawia tryb przeżycia |
+| `/gamemode creative <nick>` | Ustawia tryb kreatywny |
+| `/gamemode spectator <nick>` | Ustawia tryb widza |
+| `/time set day` / `/time set night` | Ustawia porę dnia |
+| `/weather clear` / `/weather rain` | Zmienia pogodę |
+| `/difficulty easy\|normal\|hard\|peaceful` | Ustawia poziom trudności |
+
+## Gracze
+
+| Komenda | Działanie |
+| --- | --- |
+| `/tp <nick>` | Teleportuje Cię do gracza |
+| `/tp <nick1> <nick2>` | Teleportuje `nick1` do `nick2` |
+| `/give <nick> <item> <ilość>` | Daje przedmiot graczowi |
+| `/kick <nick>` | Wyrzuca gracza z serwera |
+| `/ban <nick>` | Banuje gracza |
+| `/pardon <nick>` | Zdejmuje bana |
+
+## Zarządzanie serwerem
+
+| Komenda | Działanie |
+| --- | --- |
+| `/save-all` | Wymusza natychmiastowy zapis świata |
+| `/stop` | Bezpiecznie zatrzymuje serwer (zapisuje świat przed wyłączeniem) |
+| `/reload` | Przeładowuje konfigurację i pluginy bez restartu |
+
+<Warning>
+  Używaj `/stop` zamiast zabijania procesu przez panel, gdy to możliwe — zmniejsza ryzyko uszkodzenia świata. `/reload` bywa niestabilny przy niektórych pluginach — w razie wątpliwości zrób pełny restart.
+</Warning>

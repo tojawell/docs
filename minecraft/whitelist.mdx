@@ -1,0 +1,45 @@
+---
+title: "Zarządzanie whitelistą"
+description: "Włączanie whitelisty i dodawanie graczy."
+---
+
+Whitelista ogranicza dostęp do serwera tylko do wskazanych graczy — przydatna na serwerach prywatnych lub w trybie non-premium.
+
+## Włączanie whitelisty
+
+Z konsoli serwera:
+
+```text
+/whitelist on
+```
+
+Albo trwale w pliku `server.properties` (edytowalnym przez SFTP lub Edytor plików w panelu):
+
+```text
+white-list=true
+```
+
+## Dodawanie i usuwanie graczy
+
+```text
+/whitelist add <nick>
+/whitelist remove <nick>
+```
+
+## Wyłączanie whitelisty
+
+```text
+/whitelist off
+```
+
+## Przeładowanie listy
+
+Jeśli edytowałeś plik `whitelist.json` bezpośrednio przez SFTP zamiast komendami, wczytaj zmiany bez restartu:
+
+```text
+/whitelist reload
+```
+
+<Tip>
+  Plik `whitelist.json` znajdziesz w głównym katalogu serwera — możesz go edytować ręcznie, np. przy masowym dodawaniu graczy z gotowej listy.
+</Tip>

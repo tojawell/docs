@@ -1,0 +1,35 @@
+---
+title: "Zmienne środowiskowe i restart"
+description: "Bezpieczne przechowywanie tokena i zarządzanie restartami bota."
+---
+
+## Po co zmienne środowiskowe
+
+Token bota, klucze API czy inne dane wrażliwe **nigdy nie powinny znaleźć się na stałe w kodzie** — zwłaszcza jeśli kod trafia do publicznego repozytorium. Zamiast tego, odczytuje się je ze zmiennych środowiskowych.
+
+## Ustawianie zmiennych w panelu
+
+<Steps>
+  <Step title="Wejdź w Startup / Zmienne">
+    W panelu serwera przejdź do zakładki **Uruchamianie / Startup** — tam znajduje się sekcja zmiennych środowiskowych.
+  </Step>
+  <Step title="Dodaj zmienną">
+    Np. `DISCORD_TOKEN` z wartością tokena Twojego bota.
+  </Step>
+  <Step title="Odczytaj ją w kodzie">
+    W Node.js: `process.env.DISCORD_TOKEN`. W Pythonie (z pakietem `python-dotenv` lub natywnie): `os.environ["DISCORD_TOKEN"]`.
+  </Step>
+  <Step title="Zapisz i zrestartuj bota">
+    Zmiany zmiennych środowiskowych wymagają restartu procesu, żeby zostały wczytane.
+  </Step>
+</Steps>
+
+## Restart i logi
+
+- **Restart** w konsoli panelu zatrzymuje i ponownie uruchamia proces bota — używaj po każdej zmianie kodu lub zmiennych.
+- Konsola na bieżąco pokazuje logi (`console.log` / `print`) — to pierwsze miejsce do sprawdzenia, gdy bot nie odpowiada.
+- Jeśli bot pada z błędem od razu po starcie, zwykle winne są: zły token, brak zainstalowanych zależności lub błąd składni w kodzie — sprawdź ostatnie linijki logu.
+
+<Tip>
+  Jeśli Twój bot ma się sam podnosić po awarii, sprawdź w panelu opcję automatycznego restartu przy zatrzymaniu procesu — dostępność zależy od planu.
+</Tip>

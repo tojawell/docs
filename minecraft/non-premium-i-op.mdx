@@ -1,0 +1,45 @@
+---
+title: "Tryb non-premium i nadawanie OP"
+description: "Włączanie serwera dla graczy bez licencji oraz nadawanie uprawnień administratora."
+---
+
+## Tryb non-premium (cracked)
+
+Tryb non-premium pozwala łączyć się graczom bez oryginalnej licencji Minecraft (używającym klientów typu “cracked launcher”).
+
+<Steps>
+  <Step title="Edytuj server.properties">
+    Przez [SFTP](/minecraft/sftp) lub Edytor plików w panelu, otwórz plik `server.properties` i ustaw:
+
+    ```text
+    online-mode=false
+    ```
+  </Step>
+  <Step title="Zapisz i zrestartuj serwer">
+    Zmiana wymaga pełnego restartu, nie samego `/reload`.
+  </Step>
+</Steps>
+
+<Warning>
+  Przy `online-mode=false` każdy może połączyć się pod dowolnym nickiem, w tym podszywając się pod innego gracza — serwer nie weryfikuje tożsamości przez serwery Mojang/Microsoft. Jeśli zależy Ci na kontroli dostępu, włącz dodatkowo [whitelistę](/minecraft/whitelist).
+</Warning>
+
+## Nadawanie uprawnień OP
+
+Operator (OP) ma pełne uprawnienia administracyjne w grze — w tym możliwość niszczenia dowolnych bloków, używania komend administracyjnych i zarządzania graczami.
+
+Z konsoli serwera:
+
+```text
+/op <nick>
+```
+
+Odebranie uprawnień:
+
+```text
+/deop <nick>
+```
+
+<Tip>
+  Nadawaj OP wyłącznie zaufanym osobom — to najczęstsza przyczyna zniszczonych światów na serwerach prywatnych. Do zwykłego moderowania (kick/ban/mute) rozważ zamiast tego plugin uprawnień, np. LuckPerms, który pozwala nadawać węższe, bardziej precyzyjne uprawnienia.
+</Tip>

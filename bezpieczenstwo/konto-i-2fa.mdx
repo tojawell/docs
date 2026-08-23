@@ -1,0 +1,39 @@
+---
+title: "Bezpieczeństwo konta i 2FA"
+description: "Jak zabezpieczyć konto w panelu klienta."
+---
+
+## Włącz weryfikację dwuetapową (2FA)
+
+<Steps>
+  <Step title="Wejdź w ustawienia konta">
+    Zaloguj się do [panelu klienta](https://panel.skylix.pl) i przejdź do **Ustawień konta**.
+  </Step>
+  <Step title="Włącz 2FA">
+    Zeskanuj wyświetlony kod QR aplikacją uwierzytelniającą (np. Google Authenticator, Authy) i potwierdź kodem z aplikacji.
+  </Step>
+  <Step title="Zapisz kody zapasowe">
+    Panel zwykle wyświetla kody odzyskiwania — zapisz je w bezpiecznym miejscu na wypadek utraty dostępu do aplikacji uwierzytelniającej.
+  </Step>
+</Steps>
+
+## Dobre praktyki
+
+- Używaj **unikalnego, silnego hasła** do panelu — nieużywanego nigdzie indziej. Rozważ menedżera haseł (np. Bitwarden).
+- Nigdy nie udostępniaj hasła ani kodów 2FA nikomu — **zespół Skylix nigdy nie poprosi Cię o hasło** na Discordzie, mailu ani telefonicznie.
+- Uważaj na wiadomości podszywające się pod support (phishing) — zawsze sprawdzaj, czy link prowadzi faktycznie do `panel.skylix.pl`.
+- Jeśli udostępniasz dostęp do serwera znajomemu (np. administratorowi), rozważ osobne subkonto zamiast dzielenia się głównym hasłem, jeśli panel na to pozwala.
+
+## Co zrobić w razie włamania na konto
+
+<Steps>
+  <Step title="Zmień hasło natychmiast">
+    Jeśli nadal masz dostęp do konta, zmień hasło od razu.
+  </Step>
+  <Step title="Skontaktuj się z nami">
+    Otwórz [zgłoszenie](/panel/zgloszenia) lub napisz na [Discordzie](https://discord.gg/CCm633Q6rc) — pomożemy zabezpieczyć konto i sprawdzimy historię logowań.
+  </Step>
+  <Step title="Sprawdź swoje usługi">
+    Zweryfikuj, czy nie zmieniono ustawień, haseł SFTP czy zmiennych środowiskowych (np. tokenów) w Twoich serwerach.
+  </Step>
+</Steps>
