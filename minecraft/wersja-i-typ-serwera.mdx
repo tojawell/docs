@@ -1,0 +1,33 @@
+---
+title: "Zmiana wersji i typu serwera"
+description: "Jak przełączyć się między Vanilla, Paper, Spigot, Forge i Fabric oraz zmienić wersję Minecraft."
+---
+
+<Warning>
+  Zmiana typu serwera lub wersji może wpłynąć na kompatybilność świata i pluginów/modów. Zrób [kopię zapasową](/minecraft/kopie-zapasowe) zanim zaczniesz.
+</Warning>
+
+<Steps>
+  <Step title="Zatrzymaj serwer">
+    W konsoli panelu kliknij **Stop** (lub wpisz `/stop`), aby bezpiecznie zapisać świat.
+  </Step>
+  <Step title="Wejdź w ustawienia uruchamiania">
+    Przejdź do zakładki **Uruchamianie / Startup** w panelu serwera.
+  </Step>
+  <Step title="Wybierz obraz / silnik serwera">
+    Z listy dostępnych opcji wybierz np. `Paper`, `Spigot`, `Forge`, `Fabric` lub `Vanilla`.
+  </Step>
+  <Step title="Wybierz wersję Minecraft">
+    Ustaw docelową wersję z rozwijanej listy (np. `1.21.x`).
+  </Step>
+  <Step title="Zapisz i uruchom ponownie">
+    Zapisz zmiany i uruchom serwer — pierwszy start po zmianie może trwać dłużej, bo pobierany jest nowy plik serwera.
+  </Step>
+</Steps>
+
+## O czym pamiętać
+
+- **Awans wersji (np. 1.20 → 1.21)** zwykle jest bezpieczny — Minecraft automatycznie aktualizuje format świata.
+- **Cofnięcie wersji (np. 1.21 → 1.20)** zazwyczaj **nie działa** i może uszkodzić świat — nie rób tego bez wcześniejszego backupu.
+- **Zmiana Forge ↔ Fabric** wymaga innych modów — mody napisane pod jeden loader nie działają na drugim.
+- Po zmianie typu serwera sprawdź w [pluginach/modach](/minecraft/pluginy), czy wszystko nadal działa poprawnie.

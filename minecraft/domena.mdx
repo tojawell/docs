@@ -1,0 +1,41 @@
+---
+title: "Podłączenie własnej domeny"
+description: "Jak sprawić, by gracze łączyli się przez adres domeny zamiast IP."
+---
+
+Zamiast kazać graczom pamiętać adres typu `123.45.67.89:25565`, możesz podłączyć własną domenę, np. `play.twojaserwer.pl`.
+
+## Wariant 1: serwer działa na domyślnym porcie 25565
+
+<Steps>
+  <Step title="Wejdź do panelu domeny">
+    Zaloguj się u swojego dostawcy domeny (tam, gdzie ją kupiłeś).
+  </Step>
+  <Step title="Dodaj rekord A">
+    Utwórz rekord typu `A` dla subdomeny (np. `play`) wskazujący na adres IP Twojego serwera z panelu Skylix.
+  </Step>
+  <Step title="Poczekaj na propagację">
+    Zmiana DNS może potrwać od kilku minut do kilku godzin.
+  </Step>
+</Steps>
+
+## Wariant 2: serwer działa na innym porcie
+
+Jeśli Twój port gry to coś innego niż `25565`, użyj rekordu **SRV** — dzięki niemu gracze wpiszą samą domenę bez numeru portu:
+
+```text
+Nazwa: _minecraft._tcp.play
+Typ: SRV
+Priorytet: 0
+Waga: 5
+Port: <Twój port gry>
+Cel: play.twojaserwer.pl.
+```
+
+<Note>
+  Rekord SRV działa tylko w oficjalnym kliencie Minecraft Java Edition. Niektóre serwery proxy (np. BungeeCord/Velocity) mogą wymagać dodatkowej konfiguracji po stronie serwera.
+</Note>
+
+## Sprawdzenie, czy działa
+
+Użyj narzędzia takiego jak [mcsrvstat.us](https://mcsrvstat.us) i wpisz swoją domenę — jeśli serwer jest widoczny i online, konfiguracja się powiodła.

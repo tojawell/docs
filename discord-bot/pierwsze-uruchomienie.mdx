@@ -1,0 +1,29 @@
+---
+title: "Pierwsze uruchomienie bota"
+description: "Jak wgrać kod bota i uruchomić go na hostingu Skylix."
+---
+
+<Steps>
+  <Step title="Zamów hosting bota">
+    Wybierz plan na [skylix.pl/oferty/discord](https://skylix.pl/oferty/discord).
+  </Step>
+  <Step title="Wgraj kod bota">
+    Przez [SFTP](/minecraft/sftp) (te same zasady działania co przy serwerach Minecraft) wgraj pliki swojego bota, albo podłącz repozytorium Git, jeśli panel to obsługuje.
+  </Step>
+  <Step title="Ustaw środowisko uruchomieniowe">
+    W zakładce **Uruchamianie / Startup** wybierz odpowiedni obraz — np. Node.js (dla botów w discord.js) lub Python (dla discord.py) — oraz wersję języka zgodną z Twoim kodem.
+  </Step>
+  <Step title="Ustaw komendę startową">
+    Podaj plik wejściowy bota, np. `node index.js` lub `python bot.py`. Zależności (`npm install` / `pip install -r requirements.txt`) instalowane są zwykle automatycznie przy starcie.
+  </Step>
+  <Step title="Dodaj token bota">
+    Nigdy nie wpisuj tokena bezpośrednio w kodzie — ustaw go jako zmienną środowiskową. Zobacz [Zmienne środowiskowe i restart](/discord-bot/zmienne-srodowiskowe).
+  </Step>
+  <Step title="Uruchom bota">
+    Kliknij **Start** i obserwuj konsolę — poprawne uruchomienie zwykle kończy się komunikatem typu `Logged in as TwojBot#1234`.
+  </Step>
+</Steps>
+
+<Warning>
+  Jeśli publikujesz kod bota na GitHubie, upewnij się, że plik z tokenem (`.env` lub podobny) jest w `.gitignore`. Wyciek tokena pozwala przejąć pełną kontrolę nad botem — w razie wycieku natychmiast zresetuj token w [Discord Developer Portal](https://discord.com/developers/applications).
+</Warning>

@@ -1,0 +1,57 @@
+---
+title: "Pierwsze logowanie przez SSH"
+description: "Jak połączyć się z serwerem VPS i zabezpieczyć go na start."
+---
+
+## Dane dostępowe
+
+Po uruchomieniu VPS-a dostajesz adres IP oraz hasło root — mailem i/lub w panelu klienta, w zakładce swojej usługi.
+
+## Połączenie
+
+<Steps>
+  <Step title="Mac / Linux">
+    Otwórz terminal i wpisz:
+
+    ```bash
+    ssh root@TWOJE_IP
+    ```
+
+    Jeśli port SSH jest inny niż domyślny `22`, dodaj `-p PORT`.
+  </Step>
+  <Step title="Windows">
+    Użyj wbudowanego terminala (PowerShell/Windows Terminal z tym samym poleceniem `ssh`) albo aplikacji [PuTTY](https://www.putty.org/), wpisując adres IP jako Host Name.
+  </Step>
+  <Step title="Zaloguj się">
+    Przy pierwszym połączeniu terminal zapyta o zaufanie do klucza serwera — potwierdź (`yes`), następnie podaj otrzymane hasło.
+  </Step>
+</Steps>
+
+## Pierwsze kroki po zalogowaniu
+
+<Steps>
+  <Step title="Zmień hasło roota">
+    ```bash
+    passwd
+    ```
+  </Step>
+  <Step title="Zaktualizuj system">
+    Debian/Ubuntu:
+
+    ```bash
+    apt update && apt upgrade -y
+    ```
+  </Step>
+  <Step title="Utwórz osobnego użytkownika (zalecane)">
+    Praca stała na koncie root zwiększa ryzyko — warto założyć zwykłego użytkownika z uprawnieniami `sudo`:
+
+    ```bash
+    adduser twojanazwa
+    usermod -aG sudo twojanazwa
+    ```
+  </Step>
+</Steps>
+
+<Tip>
+  Więcej o zabezpieczaniu dostępu (klucze SSH zamiast haseł, firewall) w [Bezpieczeństwie konta i 2FA](/bezpieczenstwo/konto-i-2fa).
+</Tip>

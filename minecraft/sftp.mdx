@@ -1,0 +1,35 @@
+---
+title: "Połączenie przez SFTP"
+description: "Jak zarządzać plikami serwera z poziomu własnego komputera."
+---
+
+SFTP pozwala przesyłać pliki między Twoim komputerem a serwerem — przydatne przy dużych paczkach map, wielu pluginach naraz czy edycji plików konfiguracyjnych w ulubionym edytorze.
+
+## Dane połączenia
+
+Znajdziesz je w panelu, w zakładce **Przegląd / Overview** danego serwera:
+
+- **Host** — adres IP serwera,
+- **Port SFTP** — zwykle inny niż port gry (często z zakresu 2022–2030),
+- **Użytkownik i hasło** — takie same jak do logowania w panelu.
+
+## Połączenie krok po kroku
+
+<Steps>
+  <Step title="Zainstaluj klienta SFTP">
+    Polecamy [FileZilla](https://filezilla-project.org/) (Windows/Mac/Linux) lub [WinSCP](https://winscp.net/) (Windows).
+  </Step>
+  <Step title="Wprowadź dane">
+    W FileZilli: **Plik → Menedżer stron → Nowa strona**. Jako protokół wybierz `SFTP`, wpisz host, port, użytkownika i hasło.
+  </Step>
+  <Step title="Połącz się">
+    Po połączeniu zobaczysz katalog główny serwera — pliki jak `server.jar`, `server.properties`, foldery `plugins`, `world` itd.
+  </Step>
+  <Step title="Przesyłaj pliki">
+    Przeciągaj i upuszczaj pliki między panelem lokalnym a zdalnym. Duże pliki (np. mapy świata) warto pakować do `.zip` przed wgraniem, jeśli panel to obsługuje.
+  </Step>
+</Steps>
+
+<Warning>
+  Nie usuwaj plików `server.jar`, `eula.txt` ani folderu `world`, chyba że wiesz co robisz — to podstawa działania serwera. Przed większymi zmianami zrób [kopię zapasową](/minecraft/kopie-zapasowe).
+</Warning>
